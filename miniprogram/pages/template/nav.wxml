@@ -1,0 +1,5 @@
+<template name="topNav">
+  <view class="topnav">
+    <view class="nav-title">amork-{{navTitle}}</view>
+  </view>
+</template>

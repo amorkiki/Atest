@@ -1,0 +1,7 @@
+<!--pages/dataview/dataview.wxml-->
+<import src="../template/nav.wxml"></import>
+<view class="page">
+  <!-- 顶部导航模板 -->
+  <template is="topNav" data="{{navTitle}}"></template>
+  
+</view>

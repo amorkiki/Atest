@@ -1,0 +1,18 @@
+.page{
+background-color: #fafafa;
+}
+.topnav {
+  width: 100%;
+  height: 250rpx;
+  background-color: #CCDAFC;
+  border-bottom-left-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  box-shadow: 2rpx 3rpx 6rpx 7rpx rgba(0,0,0,.3);
+}
+.nav-title{
+  height: 50rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 350rpx;
+  font-size: 40rpx;
+}

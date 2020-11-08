@@ -1,0 +1,14 @@
+<!--pages/booklist/booklist.wxml-->
+<view class="page">
+  <!-- 顶部导航模板 -->
+  <import src="../template/nav.wxml"></import>
+  <template is="topNav" data="{{navTitle}}"></template>
+  <!-- 图书列表 -->
+  <template is="booklist" data="{{booklist}}"></template>
+  <!-- 搜索按钮 -->
+  <import src="../template/search.wxml"></import>
+  <template is="search"></template>
+  <!-- 添加按钮 -->
+  <import src="../template/add.wxml"></import>
+  <template is="add"></template>
+</view>

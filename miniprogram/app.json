@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/readnotes/readnotes",
+    "pages/dataview/dataview",
+    "pages/me/me",
+    "components/listcard/listcard"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#CCDAFC",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "图书馆",
+        "iconPath": "images/booklist1.png",
+        "selectedIconPath": "images/booklist2.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "日志墙",
+        "iconPath": "images/notes1.png",
+        "selectedIconPath": "images/notes2.png",
+        "pagePath": "pages/readnotes/readnotes"
+      },
+      {
+        "text": "足迹",
+        "iconPath": "images/datas1.png",
+        "selectedIconPath": "images/datas2.png",
+        "pagePath": "pages/dataview/dataview"
+      },
+      {
+        "text": "我自己",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png",
+        "pagePath": "pages/me/me"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
