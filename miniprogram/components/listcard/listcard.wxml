@@ -1,2 +1,20 @@
 <!--miniprogram/components/listcard/listcard.wxml-->
-<text>miniprogram/components/listcard/listcard.wxml</text>
+<view class="listcard">
+  <view class="list-top">
+    <view class="titleName">{{titleName}}</view>
+    <view class="add-icon">
+      <image src="../../images/addpaper.png" wx:if="{{indexpage === true}}"></image>
+      <image src="../../images/shanchu.png" wx:if="{{!indexpage}}"></image>
+    </view>
+  </view>
+  <view class="list-body">
+    <view class="body-details">
+      <text class="detail-title">{{subTitle}}</text>
+      <text class="detail-body" wx:if="{{indexpage === true}}">{{bookAuthor}} / {{bookPub}}</text>
+      <text class="detail-body" wx:if="{{!indexpage}}">12345</text>
+    </view>
+    <view class="body-right" bindtap="{{indexpage===true? 'bookInfo':'noteInfo'}}">
+      <image src="../../images/right.png"></image>
+    </view>
+  </view>
+</view>

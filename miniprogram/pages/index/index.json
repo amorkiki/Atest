@@ -3,5 +3,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#CCDAFC",
     "navigationBarTextStyle": "white",
-  "usingComponents": {}
+    "usingComponents": {
+      "listCard":"/components/listcard/listcard"
+    }
 }

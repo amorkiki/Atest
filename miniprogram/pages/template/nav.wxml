@@ -1,5 +1,8 @@
 <template name="topNav">
   <view class="topnav">
     <view class="nav-title">amork-{{navTitle}}</view>
+    <view wx:if="{{showArr === true}}">
+      <image src="../../images/back.png" bindtap="switchBack" class="back-arr"></image>
+    </view>
   </view>
 </template>

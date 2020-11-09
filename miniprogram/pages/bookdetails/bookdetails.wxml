@@ -1,0 +1,40 @@
+<!--miniprogram/pages/bookdetails/bookdetails.wxml-->
+<view class="page">
+    <!-- 顶部导航模板 -->
+  <import src="../template/nav.wxml"></import>
+   <template is="topNav" data="{{navTitle,showArr}}"></template>
+   <!-- tab栏切换 -->
+   <view class="tabs">
+     <view class="basic-info {{tabType==='basic'?'active':''}}" bindtap="switchToBasic">基本信息</view>
+     <view class="read-progress {{tabType==='track'?'active':''}}" bindtap="switchToTrack">阅读进度</view>
+   </view>
+   <!-- 基础信息 -->
+   <view wx:if="{{tabType==='basic'}}" >
+    <view class="infos">
+      <view class="infos-title">书名：深入浅出JavaScript</view>
+      <view class="infos-author">作者：author</view>
+      <view class="infos-publisher">出版社：publisher</view>
+      <view class="infos-isbn">IBSN：2345-N-324341423</view>
+      <view class="infos-pages">总页数：220</view>
+      <view class="infos-date">添加时间：2020-10-10</view>
+    </view>
+    <view class="btn-group">
+      <button class="edit-btn">修改</button>
+      <button class="share-btn">分享</button>
+      <button class="delete-btn">删除</button>
+    </view>
+   </view>
+  
+   <!-- 阅读进度 -->
+   <view wx:if="{{tabType==='track'}}" class="tracks">
+     <view class="progress">
+       <text>阅读进度：</text>
+       <progress percent="20" color="#CCDAFC" active show-info></progress>
+     </view>
+     <view class="timeline">
+        时间轴
+     </view>
+     <button class="update-btn">更新阅读进度</button>
+   </view>
+
+</view>

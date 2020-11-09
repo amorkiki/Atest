@@ -1,0 +1,8 @@
+<!--miniprogram/pages/addBook/addbook.wxml-->
+<view class="page">
+    <!-- 顶部导航模板 -->
+    <import src="../template/nav.wxml"></import>
+   <template is="topNav" data="{{navTitle ,showArr}}"></template>
+   <!-- 添加信息的表单 -->
+   <input-form></input-form>
+</view>

@@ -4,11 +4,17 @@
   <import src="../template/nav.wxml"></import>
   <template is="topNav" data="{{navTitle}}"></template>
   <!-- 图书列表 -->
-  <template is="booklist" data="{{booklist}}"></template>
+  <view class="booklist">
+    <listCard titleName="{{titleName}}" subTitle="{{subTitle}}" indexpage="{{true}}" bookPub="{{bookPub}}" bookAuthor="{{bookAuthor}}"></listCard>
+  </view>
   <!-- 搜索按钮 -->
-  <import src="../template/search.wxml"></import>
-  <template is="search"></template>
+  <view bindtap="searchBook">
+    <import src="../template/search.wxml"></import>
+    <template is="search"></template>
+  </view>
   <!-- 添加按钮 -->
-  <import src="../template/add.wxml"></import>
-  <template is="add"></template>
+  <view bindtap="addBook">
+    <import src="../template/add.wxml"></import>
+    <template is="add" ></template>
+  </view>
 </view>

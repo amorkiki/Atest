@@ -1,5 +1,13 @@
 .page{
-background-color: #fafafa;
+  background-color: #ffffff;
+}
+
+.back-arr {
+  position: absolute;
+  left: 40rpx;
+  top:145rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
 .topnav {
   width: 100%;
@@ -15,4 +23,31 @@ background-color: #fafafa;
   text-align: center;
   line-height: 350rpx;
   font-size: 40rpx;
+  font-weight: 700;
+}
+.search-btn image{
+  position: fixed;
+  right: 20rpx;
+  bottom: 300rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 3rpx 4rpx 5rpx rgba(225,225,225,.5);
+  border-radius: 50rpx;
+}
+.add-btn{
+  box-sizing: border-box;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 180rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 3rpx 4rpx 5rpx rgba(225,225,225,.5);
+  border-radius: 50rpx;
+}
+.add-btn image{
+  height: 80rpx;
+  width: 80rpx;
+  margin: 11rpx;
 }

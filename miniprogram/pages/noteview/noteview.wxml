@@ -1,0 +1,14 @@
+<!--miniprogram/pages/noteview/noteview.wxml-->
+<view class="page">
+  <!-- 顶部导航模板 -->
+  <import src="../template/nav.wxml"></import>
+  <template is="topNav" data="{{navTitle,showArr}}"></template>
+  <!-- 笔记正文 -->
+  <view>
+    <scroll-view scroll-y="true" class="note">
+    <view class="note-title">我是笔记title</view>
+    <view class="note-body">1234567</view>
+    </scroll-view>
+  </view>
+
+</view>

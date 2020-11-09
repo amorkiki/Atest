@@ -1,0 +1,66 @@
+/* miniprogram/pages/bookdetails/bookdetails.wxss */
+@import '../../style/guide.wxss';
+.tabs{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto ;
+  height: 100rpx;
+  width: 500rpx;
+  color: #8a8a8a;
+}
+.basic-info,
+.read-progress{
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  line-height: 150rpx;
+}
+.active{
+  border-bottom: 8rpx solid #CCDAFC;
+}
+.infos{
+  box-sizing: border-box;
+  width: 650rpx;
+  margin: 60rpx auto;
+  border: 1rpx solid #e6e6e6;
+  border-radius: 20rpx;
+  min-height: 200rpx;
+  padding: 20rpx 50rpx;
+}
+.infos{
+  color: #8a8a8a;
+  font-size:35rpx;
+}
+.infos view{
+  margin: 20rpx 0;
+}
+.btn-group button{
+  color: #8a8a8a;
+  margin-bottom: 15rpx;
+  width: 600rpx;
+  background-color: #ffffff;
+  box-shadow: 3rpx 5rpx 5rpx rgba(225,225,225,.5);
+}
+.btn-group .delete-btn{
+  background-color: #F9E3D9;
+}
+.btn-group .share-btn{
+  background-color: #EBFBFF;
+}
+.btn-group .edit-btn{
+  background-color: #FFFCE0;
+}
+.tracks{
+  color: #8a8a8a;
+  font-size: 35rpx;
+  width: 600rpx;
+  margin: 30rpx auto;
+}
+.progress{
+  margin-top: 10rpx;
+}
+.tracks .update-btn{
+  background-color: #CCDAFC;
+  color: #8a8a8a;
+}
