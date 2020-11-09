@@ -3,13 +3,16 @@
     "pages/index/index",
     "pages/dataview/dataview",
     "pages/me/me",
-    "components/listcard/listcard",
     "pages/bookdetails/bookdetails",
     "pages/noteview/noteview",
     "pages/readnotes/readnotes",
     "pages/login/login",
     "pages/addBook/addbook",
-    "components/inputform/inputform"
+    "pages/addNote/addnote",
+    "components/listcard/listcard",
+    "components/inputform/inputform",
+    "components/editor/editor"
+
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -17,33 +20,33 @@
     "navigationStyle": "custom"
   },
   "tabBar": {
-    "color": "#bfbfbf",
-    "selectedColor": "#CCDAFC",
+    "color": "#CCDAFC",
+    "selectedColor": "#7A7AF7",
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
     "list": [
       {
         "text": "图书馆",
-        "iconPath": "images/booklist1.png",
-        "selectedIconPath": "images/booklist2.png",
+        "iconPath": "images/data1.png",
+        "selectedIconPath": "images/data1.png",
         "pagePath": "pages/index/index"
       },
       {
         "text": "日志墙",
-        "iconPath": "images/notes1.png",
-        "selectedIconPath": "images/notes2.png",
+        "iconPath": "images/paper1.png",
+        "selectedIconPath": "images/paper1.png",
         "pagePath": "pages/readnotes/readnotes"
       },
       {
         "text": "足迹",
-        "iconPath": "images/datas1.png",
-        "selectedIconPath": "images/datas2.png",
+        "iconPath": "images/data2.png",
+        "selectedIconPath": "images/data2.png",
         "pagePath": "pages/dataview/dataview"
       },
       {
         "text": "我自己",
-        "iconPath": "images/me.png",
-        "selectedIconPath": "images/me1.png",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user.png",
         "pagePath": "pages/me/me"
       }
     ]

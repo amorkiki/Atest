@@ -45,6 +45,12 @@ Component({
       wx.navigateTo({
         url: '../../pages/noteview/noteview',
       })
-    }
+    },
+    addNote:function(ev){
+      console.log(ev)
+      wx.navigateTo({
+        url: '../../pages/addNote/addnote',
+      })
+    },
   }
 })

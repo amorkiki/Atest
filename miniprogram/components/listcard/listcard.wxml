@@ -2,7 +2,7 @@
 <view class="listcard">
   <view class="list-top">
     <view class="titleName">{{titleName}}</view>
-    <view class="add-icon">
+    <view class="add-icon" bindtap="{{indexpage === true ? 'addNote':'delNote'}}">
       <image src="../../images/addpaper.png" wx:if="{{indexpage === true}}"></image>
       <image src="../../images/shanchu.png" wx:if="{{!indexpage}}"></image>
     </view>

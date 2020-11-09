@@ -1,0 +1,23 @@
+<!--miniprogram/components/editor/editor.wxml-->
+<view class="page">
+  <!-- 输入框区域 -->
+  <view class="container" style="height:{{editorHeight}}px;">
+  <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+  </editor>
+  <!-- 底部富文本按钮区域 -->
+  <view class="toolbar" catchtouchend="format" style="bottom: {{isIOS ? keyboardHeight : 0}}px">
+    <image src="../../images/editor-image.png" catchtouchend="insertImage"></image>
+    <image src="../../images/h-2.png" class="{{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></image>
+    <image src="../../images/h-3.png" class="{{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></image>
+    <image src="../../images/editor-bold.png" class="{{formats.bold ? 'ql-active' : ''}}" data-name="bold"></image>
+    <image src="../../images/editor-italic.png" class="{{formats.italic ? 'ql-active' : ''}}" data-name="italic"></image>
+    <image src="../../images/editor-list-bulleted.png" class="{{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></image>
+    <image src="../../images/editor-underline.png" class="{{formats.underline ? 'ql-active' : ''}}" data-name="underline"></image>
+    <!-- <image src="../../images/list-check-2.png" data-name="list" data-value="check"></image> -->
+    <image src="../../images/editor-strikethrough.png" class="{{formats.strike ? 'ql-active' : ''}}" data-name="strike"></image>
+    <image src="../../images/editor-fenge.png" bindtap="insertDivider"></image>
+    <image src="../../images/editor-date.png" bindtap="insertDate"></image>
+  </view>
+  <button style="background-color:#EBFBFF; color:#8a8a8a; margin-top:20rpx;">保存笔记</button>
+</view>
+</view>

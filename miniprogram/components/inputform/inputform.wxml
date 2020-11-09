@@ -3,19 +3,19 @@
     <form action="">
       <view>书名：</view>
       <view class="input-info">
-        <input auto-focus="{{true}}" placeholder="请添加书名..."/>
+        <input placeholder-class="placeholder" auto-focus="{{true}}" placeholder="请添加书名..."/>
       </view>
       <view>作者：</view>
       <view class="input-info">
-        <input placeholder="请添加作者..."/>
+        <input placeholder-class="placeholder" placeholder="请添加作者..."/>
       </view>
       <view>出版社：</view>
       <view class="input-info">
-        <input placeholder="请添加出版社..."/>
+        <input placeholder-class="placeholder" placeholder="请添加出版社..."/>
       </view>
       <view>ISBN：</view>
       <view class="input-info">
-        <input placeholder="请添加ISBN号码..."/>
+        <input placeholder-class="placeholder" placeholder="请添加ISBN号码..."/>
       </view>
       <view>类型：（点击勾选图书类目）</view>
       <view class="input-info">
@@ -27,7 +27,7 @@
       </view>
       <view>总页数：</view>
       <view class="input-info">
-        <input placeholder="请输入本书总页数..."/>
+        <input placeholder-class="placeholder" placeholder="请输入本书总页数..."/>
       </view>
     </form>
   </view>

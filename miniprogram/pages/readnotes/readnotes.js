@@ -18,5 +18,10 @@ Page({
       titleName:'深入浅出JavaScript',
       subTitle:'我是笔记title'
     })
+  },
+  addNote:function(){
+    wx.navigateTo({
+      url: '../../pages/addNote/addnote',
+    })
   }
 })

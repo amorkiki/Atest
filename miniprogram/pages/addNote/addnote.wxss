@@ -1,0 +1,12 @@
+/* miniprogram/pages/addNote/addnote.wxss */
+@import '../../style/guide.wxss';
+
+.booktitle{
+  color: #8a8a8a;
+  width: 500rpx;
+  font-size: 35rpx;
+  text-align: center;
+  margin: 10rpx auto 0;
+  border-bottom: 1rpx solid #ececee;
+}
+

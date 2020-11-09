@@ -17,6 +17,7 @@ Page({
     })
   },
 
+
   addBook: function(event){
     console.log('addbook')
     console.log(event)

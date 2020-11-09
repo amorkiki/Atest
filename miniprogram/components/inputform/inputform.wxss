@@ -33,3 +33,7 @@ button{
 .reset-btn{
   background-color: #FFFCE0;
 }
+.placeholder,
+.picker{
+  color: #D2D2D2;
+}
