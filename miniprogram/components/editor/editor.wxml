@@ -7,17 +7,17 @@
   <!-- 底部富文本按钮区域 -->
   <view class="toolbar" catchtouchend="format" style="bottom: {{isIOS ? keyboardHeight : 0}}px">
     <image src="../../images/editor-image.png" catchtouchend="insertImage"></image>
-    <image src="../../images/h-2.png" class="{{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></image>
-    <image src="../../images/h-3.png" class="{{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></image>
-    <image src="../../images/editor-bold.png" class="{{formats.bold ? 'ql-active' : ''}}" data-name="bold"></image>
-    <image src="../../images/editor-italic.png" class="{{formats.italic ? 'ql-active' : ''}}" data-name="italic"></image>
-    <image src="../../images/editor-list-bulleted.png" class="{{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></image>
-    <image src="../../images/editor-underline.png" class="{{formats.underline ? 'ql-active' : ''}}" data-name="underline"></image>
+    <i class="iconfont icon-h-2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
+    <i class="iconfont icon-h-3 {{formats.header === 3 ? 'ql-active':''}}" data-name="header" data-value="{{3}}"></i>
+    <i class="iconfont icon-editor-bold {{formats.bold  ? 'ql-active':''}}" data-name="bold"></i>
+    <i class="iconfont icon-editor-italic {{formats.italic ? 'ql-active':''}}" data-name="italic"></i>
+    <i class="iconfont editor-list-bulleted {{formats.list ? 'ql-active':''}}" data-name="list" data-value="bullet"></i>
+    <i class="iconfont icon-editor-underline {{formats.underline ? 'ql-active':''}}" data-name="underline"></i>
     <!-- <image src="../../images/list-check-2.png" data-name="list" data-value="check"></image> -->
-    <image src="../../images/editor-strikethrough.png" class="{{formats.strike ? 'ql-active' : ''}}" data-name="strike"></image>
-    <image src="../../images/editor-fenge.png" bindtap="insertDivider"></image>
-    <image src="../../images/editor-date.png" bindtap="insertDate"></image>
+    <i class="iconfont icon-editor-strikethrough {{formats.strike ==='del' ? 'ql-active' : ''}}" data-name="strike"></i>
+    <i class="iconfont icon-fengexian" bindtap="insertDivider"></i>
+    <i class="iconfont icon-rili" bindtap="insertDate"></i>
   </view>
-  <button style="background-color:#EBFBFF; color:#8a8a8a; margin-top:20rpx;">保存笔记</button>
+  <button bindtap="saveEditor" style="background-color:#F9E3D9; color:#8a8a8a; margin-top:20rpx;">保存笔记</button>
 </view>
 </view>

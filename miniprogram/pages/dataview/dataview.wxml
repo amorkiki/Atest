@@ -3,5 +3,14 @@
 <view class="page">
   <!-- 顶部导航模板 -->
   <template is="topNav" data="{{navTitle}}"></template>
+  <!-- 饼图 -->
+  <view class="pie">
+    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <van-divider contentPosition="center" dashed>image</van-divider>
+  <!-- 散点图 -->
+  <view class="scatter">
+    <ec-canvas id="mychart-dom-scatter" canvas-id="mychart-scatter" ec="{{ ec }}"></ec-canvas>
+  </view>
   
 </view>

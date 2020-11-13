@@ -3,9 +3,15 @@
   <!-- 顶部导航模板 -->
   <import src="../template/nav.wxml"></import>
   <template is="topNav" data="{{navTitle}}"></template>
+  <!-- 搜索框 -->
+  <view wx:if="{{search === true}}">
+    <van-search value="{{searchInfo}}" placeholder="搜索关键词" focus="{{true}}" shape="round" bind:search="onSearch" bind:clear="onClear">
+   </van-search>
+   <van-toast id="van-toast" />
+  </view>
   <!-- 图书列表 -->
-  <view class="booklist">
-    <listCard titleName="{{titleName}}" subTitle="{{subTitle}}" indexpage="{{true}}" bookPub="{{bookPub}}" bookAuthor="{{bookAuthor}}"></listCard>
+  <view class="booklist" wx:for="{{bookSheet}}" wx:key="_id">
+    <listCard thisID="{{item._id}}" title="{{item.cata_name}}" subtitle="{{item.b_title}}" indexpage="{{true}}" details1="{{item.author}}" details2="{{item.publisher}}"></listCard>
   </view>
   <!-- 搜索按钮 -->
   <view bindtap="searchBook">

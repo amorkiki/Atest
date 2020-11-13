@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/dataview/dataview",
-    "pages/me/me",
-    "pages/bookdetails/bookdetails",
-    "pages/noteview/noteview",
+    "pages/index/index",
     "pages/readnotes/readnotes",
+    "pages/bookdetails/bookdetails",
+    "pages/me/me",
+    "pages/noteview/noteview",
     "pages/login/login",
     "pages/addBook/addbook",
     "pages/addNote/addnote",
@@ -52,5 +52,14 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "usingComponents": {
+    "van-search":"@vant/weapp/search/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "wux-icon": "wux-weapp/icon/index",
+    "wux-timeline": "wux-weapp/timeline/index",
+    "wux-timeline-item": "wux-weapp/timeline-item/index"
+    }
+  
 }

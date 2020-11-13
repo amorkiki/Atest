@@ -1,7 +1,14 @@
 // miniprogram/components/editor/editor.js
+const db = wx.cloud.database();
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+
 Component({
 
  properties:{
+  b_title:{
+    type:String
+  }
+  
  },
   data: {
     formats:{},
@@ -21,7 +28,7 @@ Component({
     onLoad() {
       const platform = wx.getSystemInfoSync().platform
       const isIOS = platform === 'ios'
-      this.setData({ isIOS})
+      this.setData({isIOS})
       const that = this
       this.updatePosition(0)
       let keyboardHeight = 0
@@ -63,22 +70,29 @@ Component({
     blur() {
       this.editorCtx.blur()
     },
+    //格式
     format(e) {
       let { name, value } = e.target.dataset
       if (!name) return
-      console.log('format', name, value)
+      console.log('format:', name, value)
+      // console.log(e.target.dataset.name)
       this.editorCtx.format(name, value)
     },
+    //格式按钮改变
     onStatusChange(e) {
       const formats = e.detail
-      console.log(formats.list)
-      this.setData({formats})
+      // console.log(formats instanceof Object) //true
+      // console.log(formats)
+      this.setData({
+        formats:formats
+      })
+      // console.log(this.data.formats)
     },
     //插入分割线
     insertDivider() {
       this.editorCtx.insertDivider({
         success: function () {
-          console.log('insert divider success')
+          // console.log('insert divider success')
         }
       })
     },
@@ -89,6 +103,7 @@ Component({
         }
       })
     },
+    //删除格式
     removeFormat() {
       this.editorCtx.removeFormat()
     },
@@ -119,7 +134,33 @@ Component({
           })
         }
       })
+    },
+    saveEditor(ev){
+      this.editorCtx.getContents({
+        success:(res)=>{      
+        // console.log("succ：" + res.html); 
+          db.collection('noteSheet').add({data:{
+            n_date:new Date(),
+            b_title:this.data.b_title,
+            content_html:res.html,
+            content_text:res.text,
+            content_delta:res.delta
+          }}).then(res=>{
+            // console.log(res)
+            Toast.success('添加成功')
+          }).then(wx.navigateBack({
+            delta: 0,
+          }))
+
+        // this.setData({
+        //   editorInfo:res.html
+        // })
+        // console.log(typeof this.data.editorInfo) //string
+        },
+        fail:(res)=>{
+        console.log("fail：" + res);
+        }
+        });
     }
-    
   }
 })

@@ -15,5 +15,36 @@
   width: 600rpx;
   height: 300rpx;
   margin: auto;
-  padding: 30rpx 10rpx;
+  padding: 30rpx 0;
+}
+.swiperBack{
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #515151;
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+}
+.swiperBack rich-text{
+  display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 4;  /*最多显示5行*/
+  overflow: hidden;  /*超出隐藏*/
+  text-overflow: ellipsis;  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行*/
+}
+.bottom-title{
+  position: absolute;
+  right: 5rpx;
+  bottom: 30rpx;
+}
+.flag{
+  font-size:30rpx;
+  color: #7A7AF7;
+  height: 50rpx;
+  text-align: center;
+  margin: 50rpx auto;
+
 }

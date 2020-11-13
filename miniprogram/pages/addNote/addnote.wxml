@@ -1,15 +1,14 @@
 <!--miniprogram/pages/addNote/addnote.wxml-->
 <view class="page">
     <!-- 顶部导航模板 -->
-    <import src="../template/nav.wxml"></import>
+  <import src="../template/nav.wxml"></import>
    <template is="topNav" data="{{navTitle ,showArr}}"></template>
-   <!-- 对应の书名 -->
-   <view class="booktitle" wx:if="{{prevpage === 'pages/index/index'}}">
+  <form bindsubmit="saveNote" >
+    <!-- 对应の书名 -->
+   <view class="booktitle">
     <input value="书名：{{bookTitle}}" disabled/>
    </view>
-   <view wx:else class="booktitle" >
-     <input type="text" placeholder="请输入书名..." auto-focus="{{true}}"/>
-   </view>
    <!-- 富文本编辑器-->
-  <my-editor></my-editor>
+  <my-editor b_title="{{bookTitle}}"></my-editor>
+  </form>
 </view>

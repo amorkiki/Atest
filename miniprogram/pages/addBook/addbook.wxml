@@ -4,5 +4,5 @@
     <import src="../template/nav.wxml"></import>
    <template is="topNav" data="{{navTitle ,showArr}}"></template>
    <!-- 添加信息的表单 -->
-   <input-form></input-form>
+   <input-form id="form" editId="{{e_id}}"></input-form>
 </view>

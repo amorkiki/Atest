@@ -10,7 +10,7 @@
     "minified": true,
     "newFeature": true,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -31,14 +31,22 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": true,
-    "packNpmRelationList": [],
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
     "minifyWXSS": true
   },
   "appid": "wx45ccb3db6a0f59aa",
   "projectname": "amorklibrary",
-  "libVersion": "2.8.1",
+  "libVersion": "2.9.5",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "h5": {
+    "esnextModules": "['taro-ui']"
+  },
   "condition": {
     "search": {
       "list": []

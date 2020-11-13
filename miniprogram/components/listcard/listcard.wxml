@@ -1,19 +1,19 @@
 <!--miniprogram/components/listcard/listcard.wxml-->
 <view class="listcard">
   <view class="list-top">
-    <view class="titleName">{{titleName}}</view>
-    <view class="add-icon" bindtap="{{indexpage === true ? 'addNote':'delNote'}}">
+    <view class="titleName">{{title}}</view>
+    <view data-index="{{thisID}}" class="add-icon" bindtap="{{indexpage === true ? 'addNote':'delNote'}}">
       <image src="../../images/addpaper.png" wx:if="{{indexpage === true}}"></image>
       <image src="../../images/shanchu.png" wx:if="{{!indexpage}}"></image>
     </view>
   </view>
   <view class="list-body">
     <view class="body-details">
-      <text class="detail-title">{{subTitle}}</text>
-      <text class="detail-body" wx:if="{{indexpage === true}}">{{bookAuthor}} / {{bookPub}}</text>
-      <text class="detail-body" wx:if="{{!indexpage}}">12345</text>
+      <text class="detail-title">{{subtitle}}</text>
+      <text class="detail-body" wx:if="{{indexpage === true}}">{{details1}} / {{details2}}</text>
+      <text class="detail-body" wx:if="{{!indexpage}}">{{details1}}</text>
     </view>
-    <view class="body-right" bindtap="{{indexpage===true? 'bookInfo':'noteInfo'}}">
+    <view class="body-right" bindtap="{{indexpage===true? 'bookInfo':'noteInfo'}}" data-index="{{thisID}}">
       <image src="../../images/right.png"></image>
     </view>
   </view>

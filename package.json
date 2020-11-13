@@ -10,6 +10,16 @@
   "license": "ISC",
   "dependencies": {
     "@miniprogram-component-plus/tabs": "^1.0.0",
-    "weui-miniprogram": "^1.0.6"
-  }
+    "@vant/weapp": "^1.6.0",
+    "weui-miniprogram": "^1.0.6",
+    "wux-weapp": "^3.8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amorkiki/amork-library-wx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amorkiki/amork-library-wx/issues"
+  },
+  "homepage": "https://github.com/amorkiki/amork-library-wx#readme"
 }
