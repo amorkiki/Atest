@@ -6,7 +6,7 @@
   </editor>
   <!-- 底部富文本按钮区域 -->
   <view class="toolbar" catchtouchend="format" style="bottom: {{isIOS ? keyboardHeight : 0}}px">
-    <image src="../../images/editor-image.png" catchtouchend="insertImage"></image>
+    <image src="../../images/picture.png" catchtouchend="insertImage"></image>
     <i class="iconfont icon-h-2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
     <i class="iconfont icon-h-3 {{formats.header === 3 ? 'ql-active':''}}" data-name="header" data-value="{{3}}"></i>
     <i class="iconfont icon-editor-bold {{formats.bold  ? 'ql-active':''}}" data-name="bold"></i>

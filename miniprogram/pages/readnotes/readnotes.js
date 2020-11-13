@@ -17,7 +17,7 @@ Page({
     flag:false
   },
 
-  onReady: function (options) {
+  onShow: function (options) {
     console.log(options)
     db.collection('noteSheet').get().then(res=>{
       console.log(res.data)

@@ -47,6 +47,7 @@
   "h5": {
     "esnextModules": "['taro-ui']"
   },
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

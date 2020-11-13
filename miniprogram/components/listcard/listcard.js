@@ -75,11 +75,9 @@ Component({
         wx.showToast({
           title: '删除成功',
         })
-      ).then(
-        wx.switchTab({
-        url: '../../pages/readnotes/readnotes?reload=true',
-      })
       )
+     
+      
       
 
 

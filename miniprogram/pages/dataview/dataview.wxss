@@ -1,9 +1,13 @@
 /* pages/dataview/dataview.wxss */
 @import '../../style/guide.wxss';
 
-.pie,
-.scatter{
+.pie{
   width: 100%;
   height: 550rpx;
   margin: 20rpx auto;
+}
+
+.lineChart{
+  width: 100%;
+  height: 300px;
 }

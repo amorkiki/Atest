@@ -7,10 +7,11 @@
   <view class="pie">
     <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
   </view>
-  <van-divider contentPosition="center" dashed>image</van-divider>
+  <van-divider contentPosition="center" dashed>@_@</van-divider>
   <!-- 散点图 -->
-  <view class="scatter">
-    <ec-canvas id="mychart-dom-scatter" canvas-id="mychart-scatter" ec="{{ ec }}"></ec-canvas>
+  <view class="lineChart">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+
   </view>
   
 </view>
