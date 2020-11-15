@@ -42,4 +42,9 @@
   <import src="../template/search.wxml"></import>
    <template is="search"></template>
  </view>
+ <!-- 向上按钮 -->
+ <view bindtap="backTop" wx:if="{{atBottom===true}}">
+    <import src="../template/top.wxml"></import>
+    <template is="top" ></template>
+  </view>
 </view>

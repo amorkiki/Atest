@@ -3,9 +3,7 @@
 App({
   globalData: {
     userName: '',
-    avatarUrl:'',
-    bookNum:0,
-    notesNum:0
+    avatarUrl:''
   },
   onLaunch: function () {
     

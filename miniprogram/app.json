@@ -17,7 +17,9 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "dark",
-    "navigationStyle": "custom"
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+
   },
   "tabBar": {
     "color": "#CCDAFC",
@@ -63,5 +65,4 @@
     "wux-timeline": "wux-weapp/timeline/index",
     "wux-timeline-item": "wux-weapp/timeline-item/index"
     }
-  
 }

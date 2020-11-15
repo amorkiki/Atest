@@ -19,7 +19,7 @@ Page({
         if(res.authSetting['scope.userInfo']===true){
           app.globalData.userName=e.detail.userInfo.nickName
           app.globalData.avatarUrl=e.detail.userInfo.avatarUrl
-          console.log(app.globalData)
+          // console.log(app.globalData)
           wx.showLoading({
             title: '登录中...',
           })

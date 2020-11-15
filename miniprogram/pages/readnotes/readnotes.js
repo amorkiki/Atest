@@ -17,9 +17,14 @@ Page({
     title3:'',
     flag:false,
     search:false,
-    searchInfo:[]
+    searchInfo:[],
+    attBottom:false
   },
-
+  onPullDownRefresh: function () {
+    console.log('refresh')
+    //调用刷新时将执行的方法
+    this.onShow();
+  },
 
   onShow: function (options) {
     console.log(options)
@@ -101,5 +106,19 @@ Page({
     })
     this.setData({search:false})
     this.onShow()
+  },
+  onReachBottom: function () {
+    this.setData({
+      atBottom:true
+    })
+  },
+  backTop:function(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    })
+    this.setData({
+      atBottom:false
+    })
   }
 })

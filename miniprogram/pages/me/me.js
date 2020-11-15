@@ -1,4 +1,5 @@
 // pages/me/me.js
+const db=wx.cloud.database()
 const app = getApp()
 Page({
 
@@ -15,17 +16,32 @@ Page({
     console.log('share')
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(){
+    console.log('onload')
     this.setData({
-      userName:app.globalData.userName,
       avatarUrl:app.globalData.avatarUrl,
-      notesNum:app.globalData.notesNum,
-      bookNum:app.globalData.bookNum
-
+      userName:app.globalData.userName
     })
+  },
+  onShow: function(){
+    console.log('onshow')
+    db.collection('bookSheet').get().then(res=>{
+      console.log(res.data.length)
+      this.setData({
+        bookNum:res.data.length
+      })
+    })
+    db.collection('noteSheet').get().then(res=>{
+      console.log(res.data.length)
+      this.setData({
+        notesNum:res.data.length
+      })
+    })
+  
 
   },
 

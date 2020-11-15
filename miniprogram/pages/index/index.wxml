@@ -23,4 +23,9 @@
     <import src="../template/add.wxml"></import>
     <template is="add" ></template>
   </view>
+  <!-- 向上按钮 -->
+  <view bindtap="backTop" wx:if="{{atBottom==true}}">
+    <import src="../template/top.wxml"></import>
+    <template is="top" ></template>
+  </view>
 </view>

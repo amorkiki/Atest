@@ -75,12 +75,14 @@ Component({
         wx.showToast({
           title: '删除成功',
         })
+      ).then(
+        wx.startPullDownRefresh({
+          success:res=>{
+            console.log(res)
+            wx.stopPullDownRefresh()
+          }
+        })
       )
-     
-      
-      
-
-
     }
   }
 })

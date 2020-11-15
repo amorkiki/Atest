@@ -1,6 +1,5 @@
 // pages/index/index.js
 import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
-const app = getApp();
 
 // 1. 获取数据库引用
 const db = wx.cloud.database()
@@ -12,19 +11,10 @@ Page({
     navTitle:'图书馆',
     bookSheet:[],
     search:false,
-    searchInfo:''
+    searchInfo:'',
+    atBottom:false
   },
-  
-  onLoad:function(){
-    db.collection('bookSheet').get().then(res=>{
-      console.log(res.data.length)
-      app.globalData.bookNum=res.data.length
-    })
-    db.collection('noteSheet').get().then(res=>{
-      console.log(res.data.length)
-      app.globalData.notesNum=res.data.length
-    })
-  },
+
   onShow: function () {
     db.collection('bookSheet').get().then(res=>{
       // res.data 包含该记录的数据
@@ -87,5 +77,19 @@ Page({
     })
     this.setData({search:false})
     this.onShow()
+  },
+  onReachBottom: function () {
+    this.setData({
+      atBottom:true
+    })
+  },
+  backTop:function(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    })
+    this.setData({
+      atBottom:false
+    })
   }
 })

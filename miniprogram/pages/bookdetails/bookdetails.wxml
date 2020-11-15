@@ -32,7 +32,7 @@
        <progress percent="{{cur_pro}}" color="#CCDAFC" active show-info></progress>
      </view>
      <block wx:if="{{curBox===true}}">
-       <input value="{{cur_p}}" auto-focus="{{true}}" class="cur-input" type="text" placeholder="输入当前页数..." confirm-type="更新" bindconfirm="updateInput"/>
+       <input value="{{cur_p}}" auto-focus="{{true}}" class="cur-input" type="text" placeholder="输入当前页数..." confirm-type="done" bindconfirm="updateInput"/>
      </block>
      <button class="update-btn" bindtap="updateCur" wx:if="{{curBox===false}}">更新阅读进度</button>
      <text>阅读笔记更新时间轴：</text>
