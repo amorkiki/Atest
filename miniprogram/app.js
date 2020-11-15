@@ -1,6 +1,12 @@
 //app.js
-App({
 
+App({
+  globalData: {
+    userName: '',
+    avatarUrl:'',
+    bookNum:0,
+    notesNum:0
+  },
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -14,10 +20,14 @@ App({
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
         // env: 'my-env-id',
+        env: 'amork-test-4ghropsv3bcc6d29',//环境ID
         traceUser: true,
       })
     }
 
     this.globalData = {}
-  }
+
+    
+  },
+  
 })

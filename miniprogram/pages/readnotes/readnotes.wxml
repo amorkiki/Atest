@@ -26,13 +26,19 @@
     </swiper-item>
   </swiper>
   </view>
+    <!-- 搜索框 -->
+    <view wx:if="{{search === true}}">
+    <van-search value="{{searchInfo}}" placeholder="搜索关键词" focus="{{true}}" shape="round" bind:search="onSearch" bind:clear="onClear">
+   </van-search>
+   <van-toast id="van-toast" />
+  </view>
   <!-- 笔记列表 -->
   <view class="booklist" wx:for="{{noteSheet}}" wx:key="_id">
     <listCard thisID="{{item._id}}" title="{{item.b_title}}" details1="{{item.content_text}}" ></listCard>
   </view>
   <view wx:if="{{flag===true}}" class="flag">还没有添加任何内容呀@_@!!</view>
   <!-- 搜索按钮 -->
- <view wx:if="{{flag===false}}" >
+ <view wx:if="{{flag===false}}" bindtap="searchNotes">
   <import src="../template/search.wxml"></import>
    <template is="search"></template>
  </view>

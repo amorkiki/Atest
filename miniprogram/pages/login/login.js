@@ -1,13 +1,45 @@
 // miniprogram/pages/login/login.js
+const app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
+    userName:'',
+    avatarUrl:'',
+    logged:false
+
 
   },
-
+  wxLogin:function(e){
+    // console.log(e.detail.userInfo)
+    // console.log(e.detail.rawData) 
+  
+    wx.getSetting({
+      success:res=>{
+        // console.log(res)
+        if(res.authSetting['scope.userInfo']===true){
+          app.globalData.userName=e.detail.userInfo.nickName
+          app.globalData.avatarUrl=e.detail.userInfo.avatarUrl
+          console.log(app.globalData)
+          wx.showLoading({
+            title: '登录中...',
+          })
+          this.setData({
+            logged:true
+          })
+          wx.switchTab({
+            url: '../index/index',
+          })
+          wx.hideLoading()
+        }
+        
+      }
+    })
+   
+    
+  },
+  
+  
+  
   /**
    * 生命周期函数--监听页面加载
    */

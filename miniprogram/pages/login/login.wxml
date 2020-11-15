@@ -1,2 +1,18 @@
 <!--miniprogram/pages/login/login.wxml-->
-<text>miniprogram/pages/login/login.wxml</text>
+  <view class="login-page">
+      <view>
+        <view class="login-btn">
+         <button class="lgbtn" open-type="getUserInfo" bindgetuserinfo="wxLogin">微信登录</button>
+        </view>
+        <!-- <form action="">
+        <view class="login-box">
+         <view class="inputView"> 
+          <input auto-focus="{{true}}" class="inputText" placeholder="请输入账号" bindinput="usernameInput" /> 
+         </view> 
+         <view class="inputView">
+          <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+         </view>
+        </view>
+      </form> -->
+      </view>
+  </view>

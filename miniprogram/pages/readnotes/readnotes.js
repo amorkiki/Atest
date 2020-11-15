@@ -1,5 +1,6 @@
 // pages/readnotes/readnotes.js
 const db = wx.cloud.database()
+const _ = db.command
 Page({
 
   /**
@@ -14,8 +15,11 @@ Page({
     title1:'',
     title2:'',
     title3:'',
-    flag:false
+    flag:false,
+    search:false,
+    searchInfo:[]
   },
+
 
   onShow: function (options) {
     console.log(options)
@@ -60,5 +64,42 @@ Page({
     wx.navigateTo({
       url: '../../pages/addNote/addnote',
     })
+  },
+  searchNotes:function(){
+    this.setData({
+      search:true
+    })
+  },
+  onSearch(e){
+    // console.log(e.detail)
+    this.setData({
+      searchInfo: e.detail,
+    });
+    // console.log(this.data.searchInfo)
+    db.collection('noteSheet').where(_.or([//正则实现模糊查寻
+      {b_title:db.RegExp({   
+        regexp: this.data.searchInfo,
+        option:'i'
+      })
+      },
+      {content_text:db.RegExp({   
+        regexp: this.data.searchInfo,
+        option:'i'
+      })}
+    ])).get().then(res=>{
+      // console.log(res)
+      if(res.data.length > 0){
+      this.setData({noteSheet:res.data})
+      }else{
+        Toast.fail('没找到呀>_<');
+      }
+    })
+  },
+  onClear(){
+    this.setData({
+      searchInfo:''
+    })
+    this.setData({search:false})
+    this.onShow()
   }
 })

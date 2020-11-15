@@ -1,2 +1,15 @@
 <!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="page">
+<!-- 头部 -->
+<view class="me-header">
+  <view class="me-login">
+    <view class="me-avatar"><image src="{{avatarUrl}}"></image></view>
+    <view class="me-name">{{userName}}</view>
+  </view>
+</view>
+<!-- 列表页 -->
+<van-cell title="我的图书馆藏书" icon="shop-o" value="{{bookNum}}本"/>
+<van-cell title="我的读书笔记" icon="newspaper-o" value="{{notesNum}}篇"/>
+<van-cell title="分享 " icon="share-o" is-link bind:click="shareApp"/>
+<van-cell title="问题反馈" icon="question-o" is-link/>
+</view>

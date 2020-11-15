@@ -105,7 +105,7 @@ Page({
      var halfYearTime=(new Date).getTime()-24*60*60*1000*180;
      //获取halfYearTime传入 Date 日期对象转换为字符串，如"2020/8/4"
      var halfYearTime=new Date(halfYearTime).toLocaleDateString();
-     console.log(halfYearTime)
+    //  console.log(halfYearTime)
       db.collection('noteSheet').where({
       // n_date是字段，数据类型是date对象，_.gte大于 和_.lte小于 这里要传入date对象，
       // 使用例如2020-08-04 12:13:29格式传入
@@ -113,7 +113,7 @@ Page({
         // n_date:_.eq(new Date(date))
       })
       .get().then(async res=>{
-        console.log((res.data))
+        // console.log((res.data))
         var arr=[]
        for(var i=0;i<res.data.length;i++){
         arr[i]= fromatTime(res.data[i].n_date,"Y-M")
@@ -123,7 +123,7 @@ Page({
          obj[name]=obj[name] ? ++obj[name] :1
          return obj
        },{})
-       console.log(arr); //{2020-10: 3, 2020-11: 7, 2020-09: 2, 2020-07: 2, 2020-08: 1, …}
+      //  console.log(arr); //{2020-10: 3, 2020-11: 7, 2020-09: 2, 2020-07: 2, 2020-08: 1, …}
       var arr1=[]
       var arr3=[]
       for(var obj in arr){
@@ -134,9 +134,9 @@ Page({
         lineAxis: arr1.sort()
       })
       arr3=arr3.sort()
-      console.log(arr3);//["2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11"]
+      // console.log(arr3);//["2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11"]
       
-      console.log(this.data.lineAxis); //["06月", "07月", "08月", "09月", "10月", "11月"]
+      // console.log(this.data.lineAxis); //["06月", "07月", "08月", "09月", "10月", "11月"]
       var arr2=[]
       for (var i=0;i<arr3.length;i++){
         arr2.push(arr[arr3[i]])

@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/dataview/dataview",
+    "pages/login/login",
     "pages/index/index",
+    "pages/me/me",
     "pages/readnotes/readnotes",
     "pages/bookdetails/bookdetails",
-    "pages/me/me",
     "pages/noteview/noteview",
-    "pages/login/login",
     "pages/addBook/addbook",
     "pages/addNote/addnote",
+    "pages/dataview/dataview",
     "components/listcard/listcard",
     "components/inputform/inputform",
     "components/editor/editor"
@@ -44,7 +44,7 @@
         "pagePath": "pages/dataview/dataview"
       },
       {
-        "text": "我自己",
+        "text": "我",
         "iconPath": "images/user.png",
         "selectedIconPath": "images/user.png",
         "pagePath": "pages/me/me"
@@ -57,6 +57,8 @@
     "van-toast": "@vant/weapp/toast/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-divider": "@vant/weapp/divider/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
     "wux-icon": "wux-weapp/icon/index",
     "wux-timeline": "wux-weapp/timeline/index",
     "wux-timeline-item": "wux-weapp/timeline-item/index"
