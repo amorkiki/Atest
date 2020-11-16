@@ -14,12 +14,12 @@
     <listCard thisID="{{item._id}}" title="{{item.cata_name}}" subtitle="{{item.b_title}}" indexpage="{{true}}" details1="{{item.author}}" details2="{{item.publisher}}"></listCard>
   </view>
   <!-- 搜索按钮 -->
-  <view bindtap="searchBook">
+  <view bindtap="searchBook"  wx:if="{{searchShow==true}}">
     <import src="../template/search.wxml"></import>
     <template is="search"></template>
   </view>
   <!-- 添加按钮 -->
-  <view bindtap="addBook">
+  <view bindtap="addBook" wx:if="{{addShow==true}}">
     <import src="../template/add.wxml"></import>
     <template is="add" ></template>
   </view>

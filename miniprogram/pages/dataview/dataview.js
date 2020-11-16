@@ -78,7 +78,7 @@ Page({
           },
           data: this.data.pie_Name
       },
-        color: ["#7A7AF7", "#CCDAFC", "#F9E3D9", "#EBFBFF", "#C6CAE9", "#FF9F7F"],
+        color: ["#C9E56E", "#CCDAFC", "#F9E3D9", "#EBFBFF", "#C6CAE9", "#FF9F7F","#74E5F1"],
         series: [{
           label: {
             normal: {

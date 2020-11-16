@@ -27,9 +27,9 @@ Page({
   },
 
   onShow: function (options) {
-    console.log(options)
+    // console.log(options)
     db.collection('noteSheet').get().then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       if(res.data.length>2){
         this.setData({
           noteSheet:JSON.parse(JSON.stringify(res.data)),
@@ -120,5 +120,14 @@ Page({
     this.setData({
       atBottom:false
     })
-  }
+  },
+  onPageScroll:function(e){
+    console.log(e)
+    // if(e.scrollTop>260){
+    //   this.setData({addShow:false,searchShow:false,search:false})
+    // }
+    // if(e.scrollTop<=260){
+    //   this.setData({atBottom:false,searchShow:true,addShow:true})
+    // }
+  },
 })

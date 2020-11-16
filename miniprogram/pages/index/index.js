@@ -12,18 +12,28 @@ Page({
     bookSheet:[],
     search:false,
     searchInfo:'',
-    atBottom:false
+    atBottom:false,
+    searchShow:true,
+    addShow:true
   },
 
   onShow: function () {
     db.collection('bookSheet').get().then(res=>{
       // res.data 包含该记录的数据
-      console.log(res.data)
+      // console.log(res.data)
       const result = res.data
       this.setData({bookSheet:result})
     })
   },
-
+  onPageScroll:function(e){
+    // console.log(e)
+    if(e.scrollTop>260){
+      this.setData({addShow:false,searchShow:false,search:false})
+    }
+    if(e.scrollTop<=260){
+      this.setData({atBottom:false,searchShow:true,addShow:true})
+    }
+  },
 
   addBook: function(event){
     console.log('addbook')
