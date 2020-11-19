@@ -28,7 +28,7 @@
     "borderStyle": "white",
     "list": [
       {
-        "text": "图书馆",
+        "text": "书桌",
         "iconPath": "images/data1.png",
         "selectedIconPath": "images/data1.png",
         "pagePath": "pages/index/index"

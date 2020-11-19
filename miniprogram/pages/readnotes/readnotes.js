@@ -123,11 +123,8 @@ Page({
   },
   onPageScroll:function(e){
     console.log(e)
-    // if(e.scrollTop>260){
-    //   this.setData({addShow:false,searchShow:false,search:false})
-    // }
-    // if(e.scrollTop<=260){
-    //   this.setData({atBottom:false,searchShow:true,addShow:true})
-    // }
+    if(e.scrollTop<=260){
+      this.setData({atBottom:false})
+    }
   },
 })

@@ -8,8 +8,8 @@
   </view>
 </view>
 <!-- 列表页 -->
-<van-cell title="我的图书馆藏书" icon="shop-o" value="{{bookNum}}本"/>
-<van-cell title="我的读书笔记" icon="newspaper-o" value="{{notesNum}}篇"/>
+<van-cell title="我的书桌上有书..." icon="shop-o" value="{{bookNum}}本"/>
+<van-cell title="我写的读书笔记..." icon="newspaper-o" value="{{notesNum}}篇"/>
 <van-cell title="分享 " icon="share-o" is-link bind:click="shareApp"/>
 <van-cell title="问题反馈" icon="question-o" is-link/>
 </view>
